@@ -91,7 +91,7 @@ class App extends Component {
           if (data && data.userId) 
           {
             this.getUserProfile(data.userId);
-            this.onSetLoading(true);
+            this.onSetLoading(false);
 
           }
           else {
@@ -104,7 +104,7 @@ class App extends Component {
           this.removeAuthToken();
         });
     } else {
-            this.onSetLoading(true);
+            this.onSetLoading(false);
 
       this.onRouteChange("signout");
       fetch("https://nameless-retreat-80613.herokuapp.com:/", {
