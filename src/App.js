@@ -211,6 +211,7 @@ class App extends Component {
   onRouteChange = (route) => {
     if (route === "signout") {
       this.setState(initialState);
+      
     } else if (route === "home") {
       this.setState({ isSignedIn: true });
     }
@@ -259,7 +260,7 @@ class App extends Component {
               getUserProfile={this.getUserProfile}
               saveAuthToken={this.saveAuthToken}
             />
-          ) : route === 'register' ? 
+          ) : route === 'register' || route ==='signout' ? 
             <Register
               loadUser={this.loadUser}
               onRouteChange={this.onRouteChange}
