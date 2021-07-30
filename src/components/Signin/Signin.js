@@ -35,7 +35,6 @@ class Signin extends React.Component  {
 
       target.disabled = true;
       this.props.onSetLoading(true);
-      console.log("inside signin");
 
  fetch("https://nameless-retreat-80613.herokuapp.com/signin", {
    method: "post",
