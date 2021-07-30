@@ -211,7 +211,7 @@ class App extends Component {
   onRouteChange = (route) => {
     if (route === "signout") {
       this.setState(initialState);
-      
+       this.removeAuthToken()
     } else if (route === "home") {
       this.setState({ isSignedIn: true });
     }
