@@ -87,7 +87,7 @@ class App extends Component {
       })
         .then((res) => res.json())
         .then((data) => {
-          if (data && data.id) this.getUserProfile(data.id);
+          if (data && data.userId) this.getUserProfile(data.userId);
           else {
             this.onRouteChange("signout");
             this.removeAuthToken();
