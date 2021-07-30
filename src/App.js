@@ -217,13 +217,18 @@ class App extends Component {
     const { isSignedIn, imageUrl, route, box, loading } = this.state;
     return (
       <div>
-        {loading && <Loader />}
         <div className="App">
+        {loading && <Loader />}
+        {route !== '' &&
+        (
+        <div> 
           <Particles className="particles" params={particlesOptions} />
           <Navigation
             isSignedIn={isSignedIn}
             onRouteChange={this.onRouteChange}
           />
+          </div>
+        )}
           {route === "home" ? (
             <div>
               <Rank
@@ -246,7 +251,7 @@ class App extends Component {
               getUserProfile={this.getUserProfile}
               saveAuthToken={this.saveAuthToken}
             />
-          ) : (
+          ) : route === 'register' ? 
             <Register
               loadUser={this.loadUser}
               onRouteChange={this.onRouteChange}
@@ -255,7 +260,9 @@ class App extends Component {
               getUserProfile={this.getUserProfile}
               saveAuthToken={this.saveAuthToken}
             />
-          )}
+          :
+          null
+          }
         </div>
       </div>
     );
