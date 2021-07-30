@@ -79,6 +79,7 @@ class App extends Component {
     const token = window.localStorage.getItem("token");
     if (token) {
       console.log("inside component did mount");
+      console.log(token)
       fetch("https://nameless-retreat-80613.herokuapp.com:/signin", {
         method: "post",
         headers: {
