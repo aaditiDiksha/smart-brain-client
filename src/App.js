@@ -76,6 +76,7 @@ class App extends Component {
   };
 
   componentDidMount = () => {
+    this.onSetLoading(true)
     const token = window.localStorage.getItem("token");
     if (token) {
       fetch("https://nameless-retreat-80613.herokuapp.com:/signin", {
@@ -87,7 +88,12 @@ class App extends Component {
       })
         .then((res) => res.json())
         .then((data) => {
-          if (data && data.userId) this.getUserProfile(data.userId);
+          if (data && data.userId) 
+          {
+            this.getUserProfile(data.userId);
+            this.onSetLoading(true);
+
+          }
           else {
             this.onRouteChange("signout");
             this.removeAuthToken();
@@ -98,6 +104,8 @@ class App extends Component {
           this.removeAuthToken();
         });
     } else {
+            this.onSetLoading(true);
+
       this.onRouteChange("signout");
       fetch("https://nameless-retreat-80613.herokuapp.com:/", {
         method: "get",
