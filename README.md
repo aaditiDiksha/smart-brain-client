@@ -1,7 +1,7 @@
-# **NOTE-IT **
+# **NOTE-IT**
 ## A Note Taking web app
 
-> Check out the video here
+**Check out the video here**
 
 https://user-images.githubusercontent.com/56874398/128710603-e301dbfe-7c40-4bde-a688-e4c820446547.mp4
 
