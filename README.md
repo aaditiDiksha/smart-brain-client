@@ -24,7 +24,8 @@ https://user-images.githubusercontent.com/56874398/128712619-a56bec2a-8892-48e7-
 5. Data stored in a postgres database
 
 Time taken – four weeks
+
 Deployed on Heroku
 
-## You can check **Smart-Brain** here [Smart-Brain](https://smart-brain-adt.herokuapp.com/)
-## The server side is [here](https://github.com/aaditiDiksha/smart-brain-api)
+### You can check **Smart-Brain** here [Smart-Brain](https://smart-brain-adt.herokuapp.com/)
+### The server side is [here](https://github.com/aaditiDiksha/smart-brain-api)
